@@ -1,0 +1,190 @@
+:root {
+    /* Primary */
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    /* Neutral */
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--paleBlue);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: cover;
+}
+
+main {
+    min-width: 305px;
+    max-width: 325px;
+    margin: 5rem 2rem;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 5px 20px lightsteelblue;
+}
+
+/* Section Image */
+.section-image {
+    display: flex;
+}
+
+.section-image img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Section Text */
+.section-text {
+    padding: 2rem 1.5rem;
+}
+
+h1 {
+    color: var(--darkBlue);
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+
+p {
+    color: var(--desaturatedBlue);
+    margin-block: 1.25rem;
+    padding-inline: .5rem;
+}
+
+.div-select-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .85rem;
+    background-color: var(--veryPaleBlue);
+    border-radius: 10px;
+}
+
+h2 {
+    color: var(--darkBlue);
+    font-weight: 900;
+    font-size: .925rem;
+}
+
+.div-select-plan img {
+    width: 45px;
+    height: 45px;
+    display: flex;
+}
+
+.div-select-plan > div {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.div-select-plan p {
+    margin: 0;
+    padding: 0;
+    font-size: .9rem;
+}
+
+.div-select-plan a {
+    font-weight: 700;
+    font-size: .85rem;
+}
+
+.div-select-plan a:hover {
+    text-decoration: none;
+    opacity: .75;
+}
+
+/* Button */
+button {
+    width: 100%;
+    border: none;
+    box-shadow: 0px 5px 15px lightsteelblue;
+    background-color: var(--brightBlue);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-block: 1.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: .75;
+}
+
+button h2 {
+    color: var(--veryPaleBlue);
+    font-weight: 700;
+}
+
+.section-text > h2 {
+    color: var(--desaturatedBlue);
+}
+
+.section-text > h2:hover {
+    color: var(--darkBlue);
+    cursor: pointer;
+}
+
+/* Footer */
+footer { 
+    margin-top: auto;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+footer a { 
+    text-decoration: none;
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+    }
+    
+    main {
+        max-width: 415px;
+    }
+    
+    /* Section Text */
+    .section-text {
+        padding: 2.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .div-select-plan {
+        padding: 1.5rem;
+    }
+
+    .div-select-plan > div {
+        gap: 1.25rem;
+    }
+
+    /* Button */
+    button {
+        margin-block: 2rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        margin-block: 6rem;
+    }
+}
